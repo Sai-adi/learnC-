@@ -4,21 +4,28 @@ class checkScore()
 {
     static void Main()
     {
-        Console.Write("Enter Your Score");
-        string score = Console.ReadLine();
-        int newScore = int.Parse(score);
+        int attempts = 1;
+        while (attempts <= 3)
+        {
+            Console.WriteLine("Guess a Number from 1 to 10");
+            string num = Console.ReadLine();
+            int newNum = int.Parse(num);
 
-        if (newScore < 100 && newScore > 90)
-            Console.WriteLine("A Grade");
+            int secret = 3;
 
-        else if (newScore < 90 && newScore > 80)
-            Console.WriteLine("B Grade");
-
-        else if (newScore < 80 && newScore > 70)
-            Console.WriteLine("C Grade");
-        else if (newScore < 70 && newScore > 60)
-            Console.WriteLine("D Grade");
-        else if (newScore < 60)
-            Console.WriteLine("F Grade");
+            if (newNum == secret)
+            {
+                Console.WriteLine("Your Guess is Correct");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Wrong Guess");
+            }
+            attempts++;
+        }
+        if(attempts>3){
+        Console.WriteLine("Out of moves");
+    }
     }
 }
