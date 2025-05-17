@@ -1,0 +1,14 @@
+D:\Day1CSharpPractice\bin\Debug\net8.0\Day1CSharpPractice.exe
+D:\Day1CSharpPractice\bin\Debug\net8.0\Day1CSharpPractice.deps.json
+D:\Day1CSharpPractice\bin\Debug\net8.0\Day1CSharpPractice.runtimeconfig.json
+D:\Day1CSharpPractice\bin\Debug\net8.0\Day1CSharpPractice.dll
+D:\Day1CSharpPractice\bin\Debug\net8.0\Day1CSharpPractice.pdb
+D:\Day1CSharpPractice\obj\Debug\net8.0\Day1CSharpPractice.GeneratedMSBuildEditorConfig.editorconfig
+D:\Day1CSharpPractice\obj\Debug\net8.0\Day1CSharpPractice.AssemblyInfoInputs.cache
+D:\Day1CSharpPractice\obj\Debug\net8.0\Day1CSharpPractice.AssemblyInfo.cs
+D:\Day1CSharpPractice\obj\Debug\net8.0\Day1CSharpPractice.csproj.CoreCompileInputs.cache
+D:\Day1CSharpPractice\obj\Debug\net8.0\Day1CSharpPractice.dll
+D:\Day1CSharpPractice\obj\Debug\net8.0\refint\Day1CSharpPractice.dll
+D:\Day1CSharpPractice\obj\Debug\net8.0\Day1CSharpPractice.pdb
+D:\Day1CSharpPractice\obj\Debug\net8.0\Day1CSharpPractice.genruntimeconfig.cache
+D:\Day1CSharpPractice\obj\Debug\net8.0\ref\Day1CSharpPractice.dll
