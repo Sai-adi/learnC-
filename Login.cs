@@ -11,21 +11,27 @@ class checkScore()
             string num = Console.ReadLine();
             int newNum = int.Parse(num);
 
-            int secret = 3;
+            Random rnd = new Random();
+            int secret = rnd.Next(1, 11);
+            // int secret = 3;
 
             if (newNum == secret)
             {
                 Console.WriteLine("Your Guess is Correct");
+
+                Console.WriteLine($"The system guessed number is :{secret}");
                 break;
             }
             else
             {
                 Console.WriteLine("Wrong Guess");
+                Console.WriteLine($"The system guessed number is :{secret}");
             }
             attempts++;
         }
-        if(attempts>3){
-        Console.WriteLine("Out of moves");
+        if (attempts > 3)
+        {
+            Console.WriteLine("Out of moves");
     }
     }
 }
