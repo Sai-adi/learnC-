@@ -1,37 +1,62 @@
+// using System;
+
+
+// // class checkScore
+
+// {
+//     static void Main()
+//     {
+//         int count = 1;
+//         int oddCount = 0;
+//         int evenCount = 0;
+//         while (count <= 10)
+//         {
+//             Console.WriteLine($"Enter the number {count}");
+//             string numbers = Console.ReadLine();
+//             int newNumbers = int.Parse(numbers);
+
+//             if (newNumbers % 2 == 0)
+//             {
+//                 evenCount++;
+//             }
+//             else
+//             {
+//                 oddCount++;
+//             }
+//             count++;
+//         }
+
+//         Console.WriteLine("...");
+//         Console.WriteLine("All Numbers Entered");
+//         Console.WriteLine($"Totaleven numbers : {evenCount}");
+//         Console.WriteLine($"Totaleven numbers :{oddCount}");
+
+//     }
+
+// }
+
 using System;
 
-class checkScore()
+class largeNumber
 {
     static void Main()
     {
-        int attempts = 1;
-        while (attempts <= 3)
+        int count = 1;
+        int max = int.MinValue;
+        while (count <= 5)
         {
-            Console.WriteLine("Guess a Number from 1 to 10");
-            string num = Console.ReadLine();
-            int newNum = int.Parse(num);
+            Console.WriteLine($"Enter Number {count}");
+            string input = Console.ReadLine();
+            int number = int.Parse(input);
 
-            Random rnd = new Random();
-            int secret = rnd.Next(1, 11);
-            // int secret = 3;
-
-            if (newNum == secret)
+            if (number > max)
             {
-                Console.WriteLine("Your Guess is Correct");
+                max = number;
+            }
 
-                Console.WriteLine($"The system guessed number is :{secret}");
-                break;
-            }
-            else
-            {
-                Console.WriteLine("Wrong Guess");
-                Console.WriteLine($"The system guessed number is :{secret}");
-            }
-            attempts++;
+            count++;
         }
-        if (attempts > 3)
-        {
-            Console.WriteLine("Out of moves");
-    }
+
+        Console.WriteLine($"The largest number is {max}");
     }
 }
