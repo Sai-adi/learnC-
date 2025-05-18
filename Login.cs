@@ -61,27 +61,47 @@
 //     }
 // }
 
+// using System;
+
+// class intro
+// {
+//     static void GreetingUser(string name)
+//     {
+//         Console.WriteLine($"The name is {name}");
+//     }
+//     static void SayHello()
+//     {
+//         Console.WriteLine("Hey Guys ");
+//     }
+//     static int add(int a, int b)
+//     {
+//         return a + b;
+//     }
+//     static void Main()
+//     {
+//         int result = add(5, 7);
+//         Console.WriteLine($"Sum is:{result}");
+//         SayHello();
+//         GreetingUser("Adithya");
+//     }
+// }
+
 using System;
 
-class intro
+class sq()
 {
-    static void GreetingUser(string name)
+    static int square(int number)
     {
-        Console.WriteLine($"The name is {name}");
-    }
-    static void SayHello()
-    {
-        Console.WriteLine("Hey Guys ");
-    }
-    static int add(int a, int b)
-    {
-        return a + b;
+        return number * number;
     }
     static void Main()
     {
-        int result = add(5, 7);
-        Console.WriteLine($"Sum is:{result}");
-        SayHello();
-        GreetingUser("Adithya");
+        Console.WriteLine("Enter the number");
+        string num = Console.ReadLine();
+        int number = int.Parse(num);
+
+        int squaredNumber = square(number);
+        Console.WriteLine($"The squared number is {squaredNumber}");
+
     }
 }
