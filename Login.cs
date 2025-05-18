@@ -196,46 +196,73 @@
 // }
 
 
-using System.Security.AccessControl;
+// using System.Security.AccessControl;
 
-class Grade
+// class Grade
+// {
+//     static void Mark(int marks)
+//     {
+//         if (marks < 50)
+//         {
+//             Console.WriteLine("Fail");
+//         }
+//         else if (marks < 70)
+//         {
+//             Console.WriteLine("D grade");
+//         }
+//         else if (marks < 80)
+//         {
+//             Console.WriteLine("C grade");
+//         }
+//         else if (marks < 90)
+//         {
+//             Console.WriteLine("B grade");
+//         }
+//         else
+//         {
+//             Console.WriteLine("A grade");
+//         }
+//     }
+//     static void Main()
+//     {
+//         Console.WriteLine("Enter the Students Marks");
+//         string input = Console.ReadLine();
+//         int marks = int.Parse(input);
+
+//         if (marks < 0 || marks > 100)
+//         {
+//             Console.WriteLine("The marks should be below 100");
+//         }
+//         else
+//         {
+//             Mark(marks);
+//         }
+//     }
+// }
+
+using System.ComponentModel.DataAnnotations;
+
+class Fun()
 {
-    static void Mark(int marks)
+    static int Sum(int[] numbers)
     {
-        if (marks < 50)
+        int total = 0;
+        int index = 0;
+
+        while (index < numbers.Length)
         {
-            Console.WriteLine("Fail");
+            total += numbers[index];
+            index++;
         }
-        else if (marks < 70)
-        {
-            Console.WriteLine("D grade");
-        }
-        else if (marks < 80)
-        {
-            Console.WriteLine("C grade");
-        }
-        else if (marks < 90)
-        {
-            Console.WriteLine("B grade");
-        }
-        else
-        {
-            Console.WriteLine("A grade");
-        }
+        return total;
     }
     static void Main()
     {
-        Console.WriteLine("Enter the Students Marks");
-        string input = Console.ReadLine();
-        int marks = int.Parse(input);
+        Console.WriteLine("Enter 10 Numbers");
+        string[] input = Console.ReadLine().Split();
+        int[] numbers = Array.ConvertAll(input, int.Parse);
 
-        if (marks < 0 || marks > 100)
-        {
-            Console.WriteLine("The marks should be below 100");
-        }
-        else
-        {
-            Mark(marks);
-        }
+        int total = Sum(numbers);
+        Console.WriteLine($"The total is{total}");
     }
 }
