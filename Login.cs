@@ -129,68 +129,113 @@
 // }
 
 
-using System;
-using System.Reflection.Metadata;
+// using System;
+// using System.Reflection.Metadata;
 
-class Cal
+// class Cal
+// {
+//     static int Add(int a, int b)
+//     {
+//         return a + b;
+//     }
+//     static int Sub(int a, int b)
+//     {
+//         return a - b;
+//     }
+//     static int Mul(int a, int b)
+//     {
+//         return a * b;
+//     }
+//     static int Div(int a, int b)
+//     {
+//         return a / b;
+//     }
+
+//     static void Main()
+//     {
+//         Console.WriteLine("Enter Two Numbers with spaces");
+//         string[] input = Console.ReadLine().Split();
+//         int a = int.Parse(input[0]);
+//         int b = int.Parse(input[1]);
+
+//         Console.WriteLine("Choose an Operation to do +,-,*,/");
+//         string operation = Console.ReadLine();
+
+//         if (operation == "+")
+//         {
+//             int Addition = Add(a, b);
+//             Console.WriteLine($"The addition of two numbers is {Addition}");
+//         }
+//         else if (operation == "-")
+//         {
+//             int Substraction = Sub(a, b);
+//             Console.WriteLine($"The substraction of two numbers is {Substraction}");
+//         }
+//         else if (operation == "*")
+//         {
+//             int Multiplication = Mul(a, b);
+//             Console.WriteLine($"The substraction of two numbers is {Multiplication}");
+//         }
+//         else if (operation == "/")
+//         {
+//             if (b == 0)
+//             {
+//                 Console.WriteLine("Cannot divide by 0");
+//             }
+//             else
+//             {
+//                 int Division = Div(a, b);
+//                 Console.WriteLine($"The Division of two numbers is {Division}");
+//             }
+//         }
+//         else
+//         {
+//             Console.WriteLine($"The invalid operation");
+//         }
+//     }
+// }
+
+
+using System.Security.AccessControl;
+
+class Grade
 {
-    static int Add(int a, int b)
+    static void Mark(int marks)
     {
-        return a + b;
-    }
-    static int Sub(int a, int b)
-    {
-        return a - b;
-    }
-    static int Mul(int a, int b)
-    {
-        return a * b;
-    }
-    static int Div(int a, int b)
-    {
-        return a / b;
-    }
-
-    static void Main()
-    {
-        Console.WriteLine("Enter Two Numbers with spaces");
-        string[] input = Console.ReadLine().Split();
-        int a = int.Parse(input[0]);
-        int b = int.Parse(input[1]);
-
-        Console.WriteLine("Choose an Operation to do +,-,*,/");
-        string operation = Console.ReadLine();
-
-        if (operation == "+")
+        if (marks < 50)
         {
-            int Addition = Add(a, b);
-            Console.WriteLine($"The addition of two numbers is {Addition}");
+            Console.WriteLine("Fail");
         }
-        else if (operation == "-")
+        else if (marks < 70)
         {
-            int Substraction = Sub(a, b);
-            Console.WriteLine($"The substraction of two numbers is {Substraction}");
+            Console.WriteLine("D grade");
         }
-        else if (operation == "*")
+        else if (marks < 80)
         {
-            int Multiplication = Mul(a, b);
-            Console.WriteLine($"The substraction of two numbers is {Multiplication}");
+            Console.WriteLine("C grade");
         }
-        else if (operation == "/")
+        else if (marks < 90)
         {
-            if (b == 0)
-            {
-                Console.WriteLine("Cannot divide by 0");
-            }
-            else
-            {
-                int Division = Div(a, b);
-                Console.WriteLine($"The Division of two numbers is {Division}");
-            }
+            Console.WriteLine("B grade");
         }
         else
         {
-            Console.WriteLine($"The invalid operation");
+            Console.WriteLine("A grade");
+        }
+    }
+    static void Main()
+    {
+        Console.WriteLine("Enter the Students Marks");
+        string input = Console.ReadLine();
+        int marks = int.Parse(input);
+
+        if (marks < 0 || marks > 100)
+        {
+            Console.WriteLine("The marks should be below 100");
+        }
+        else
+        {
+            Mark(marks);
         }
     }
 }
