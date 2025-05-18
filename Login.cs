@@ -35,28 +35,53 @@
 
 // }
 
+// using System;
+
+// class largeNumber
+// {
+//     static void Main()
+//     {
+//         int count = 1;
+//         int max = int.MinValue;
+//         while (count <= 5)
+//         {
+//             Console.WriteLine($"Enter Number {count}");
+//             string input = Console.ReadLine();
+//             int number = int.Parse(input);
+
+//             if (number > max)
+//             {
+//                 max = number;
+//             }
+
+//             count++;
+//         }
+
+//         Console.WriteLine($"The largest number is {max}");
+//     }
+// }
+
 using System;
 
-class largeNumber
+class intro
 {
+    static void GreetingUser(string name)
+    {
+        Console.WriteLine($"The name is {name}");
+    }
+    static void SayHello()
+    {
+        Console.WriteLine("Hey Guys ");
+    }
+    static int add(int a, int b)
+    {
+        return a + b;
+    }
     static void Main()
     {
-        int count = 1;
-        int max = int.MinValue;
-        while (count <= 5)
-        {
-            Console.WriteLine($"Enter Number {count}");
-            string input = Console.ReadLine();
-            int number = int.Parse(input);
-
-            if (number > max)
-            {
-                max = number;
-            }
-
-            count++;
-        }
-
-        Console.WriteLine($"The largest number is {max}");
+        int result = add(5, 7);
+        Console.WriteLine($"Sum is:{result}");
+        SayHello();
+        GreetingUser("Adithya");
     }
 }
