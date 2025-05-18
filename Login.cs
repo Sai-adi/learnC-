@@ -106,24 +106,91 @@
 //     }
 // }
 
-using System;
-using System.Security.AccessControl;
+// using System;
+// using System.Security.AccessControl;
 
-class sum {
+// class sum {
+//     static int Add(int a, int b)
+//     {
+//         return a + b;
+
+//     }
+
+//     static void Main()
+//     {
+//         Console.WriteLine("Enter Two Numbers with spaces");
+//         string[] inputs = Console.ReadLine().Split(' ');
+//         int a = int.Parse(inputs[0]);
+//         int b = int.Parse(inputs[1]);
+
+//         int final=Add(a, b);
+//         Console.WriteLine($"The sum is {final}");
+//     }
+// }
+
+
+using System;
+using System.Reflection.Metadata;
+
+class Cal
+{
     static int Add(int a, int b)
     {
         return a + b;
-
+    }
+    static int Sub(int a, int b)
+    {
+        return a - b;
+    }
+    static int Mul(int a, int b)
+    {
+        return a * b;
+    }
+    static int Div(int a, int b)
+    {
+        return a / b;
     }
 
     static void Main()
     {
         Console.WriteLine("Enter Two Numbers with spaces");
-        string[] inputs = Console.ReadLine().Split(' ');
-        int a = int.Parse(inputs[0]);
-        int b = int.Parse(inputs[1]);
+        string[] input = Console.ReadLine().Split();
+        int a = int.Parse(input[0]);
+        int b = int.Parse(input[1]);
 
-        int final=Add(a, b);
-        Console.WriteLine($"The sum is {final}");
+        Console.WriteLine("Choose an Operation to do +,-,*,/");
+        string operation = Console.ReadLine();
+
+        if (operation == "+")
+        {
+            int Addition = Add(a, b);
+            Console.WriteLine($"The addition of two numbers is {Addition}");
+        }
+        else if (operation == "-")
+        {
+            int Substraction = Sub(a, b);
+            Console.WriteLine($"The substraction of two numbers is {Substraction}");
+        }
+        else if (operation == "*")
+        {
+            int Multiplication = Mul(a, b);
+            Console.WriteLine($"The substraction of two numbers is {Multiplication}");
+        }
+        else if (operation == "/")
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("Cannot divide by 0");
+            }
+            else
+            {
+                int Division = Div(a, b);
+                Console.WriteLine($"The Division of two numbers is {Division}");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"The invalid operation");
+        }
     }
 }
