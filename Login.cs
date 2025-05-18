@@ -86,22 +86,44 @@
 //     }
 // }
 
-using System;
+// using System;
 
-class sq()
-{
-    static int square(int number)
+// class sq()
+// {
+//     static int square(int number)
+//     {
+//         return number * number;
+//     }
+//     static void Main()
+//     {
+//         Console.WriteLine("Enter the number");
+//         string num = Console.ReadLine();
+//         int number = int.Parse(num);
+
+//         int squaredNumber = square(number);
+//         Console.WriteLine($"The squared number is {squaredNumber}");
+
+//     }
+// }
+
+using System;
+using System.Security.AccessControl;
+
+class sum {
+    static int Add(int a, int b)
     {
-        return number * number;
+        return a + b;
+
     }
+
     static void Main()
     {
-        Console.WriteLine("Enter the number");
-        string num = Console.ReadLine();
-        int number = int.Parse(num);
+        Console.WriteLine("Enter Two Numbers with spaces");
+        string[] inputs = Console.ReadLine().Split(' ');
+        int a = int.Parse(inputs[0]);
+        int b = int.Parse(inputs[1]);
 
-        int squaredNumber = square(number);
-        Console.WriteLine($"The squared number is {squaredNumber}");
-
+        int final=Add(a, b);
+        Console.WriteLine($"The sum is {final}");
     }
 }
