@@ -240,29 +240,48 @@
 //     }
 // }
 
-using System.ComponentModel.DataAnnotations;
+// using System.ComponentModel.DataAnnotations;
+
+// class Fun()
+// {
+//     static int Sum(int[] numbers)
+//     {
+//         int total = 0;
+//         int index = 0;
+
+//         while (index < numbers.Length)
+//         {
+//             total += numbers[index];
+//             index++;
+//         }
+//         return total;
+//     }
+//     static void Main()
+//     {
+//         Console.WriteLine("Enter 10 Numbers");
+//         string[] input = Console.ReadLine().Split();
+//         int[] numbers = Array.ConvertAll(input, int.Parse);
+
+//         int total = Sum(numbers);
+//         Console.WriteLine($"The total is{total}");
+//     }
+// }
+
+using System;
 
 class Fun()
 {
-    static int Sum(int[] numbers)
-    {
-        int total = 0;
-        int index = 0;
-
-        while (index < numbers.Length)
-        {
-            total += numbers[index];
-            index++;
-        }
-        return total;
-    }
     static void Main()
     {
-        Console.WriteLine("Enter 10 Numbers");
-        string[] input = Console.ReadLine().Split();
-        int[] numbers = Array.ConvertAll(input, int.Parse);
+        for (int i = 0; i <= 5; i++)
+        {
+            Console.WriteLine("Iteration: " + i);
+        }
+        string[] fruits = { "Apple", "Banana", "Guava" };
 
-        int total = Sum(numbers);
-        Console.WriteLine($"The total is{total}");
+        foreach (string fruit in fruits)
+        {
+            Console.WriteLine(fruit);
+        }
     }
 }
