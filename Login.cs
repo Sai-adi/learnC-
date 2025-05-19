@@ -267,21 +267,60 @@
 //     }
 // }
 
-using System;
+// using System;
 
-class Fun()
-{
+// class Fun()
+// {
+//     static void Main()
+//     {
+//         for (int i = 0; i <= 5; i++)
+//         {
+//             Console.WriteLine("Iteration: " + i);
+//         }
+//         string[] fruits = { "Apple", "Banana", "Guava" };
+
+//         foreach (string fruit in fruits)
+//         {
+//             Console.WriteLine(fruit);
+//         }
+//     }
+// }
+
+
+using System.Collections.Specialized;
+
+class Hub {
+
+    static double CalculateAverage(int[] marks)
+    {
+        Console.WriteLine("Students Marks");
+        int sum = 0;
+
+        foreach (int mark in marks)
+        {
+            Console.WriteLine(mark);
+        }
+        for (int i = 0; i < marks.Length; i++)
+        {
+            sum += marks[i];
+        }
+
+        double average = (double)sum / marks.Length;
+        return average;
+    }
     static void Main()
     {
-        for (int i = 0; i <= 5; i++)
-        {
-            Console.WriteLine("Iteration: " + i);
-        }
-        string[] fruits = { "Apple", "Banana", "Guava" };
+        Console.WriteLine("Enter The Student Marks: ");
+        string input = Console.ReadLine();
+        string[] marks = input.Split(' ');
 
-        foreach (string fruit in fruits)
-        {
-            Console.WriteLine(fruit);
+        int[] intMarks = new int[marks.Length];
+        for (int i=0; i < marks.Length; i++) {
+            intMarks[i] = int.Parse(marks[i]);
         }
+
+        double average = CalculateAverage(intMarks);
+        Console.WriteLine("Average marks are "+ average);
     }
+    
 }
