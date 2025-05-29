@@ -289,38 +289,69 @@
 
 using System.Collections.Specialized;
 
-class Hub {
+// class Hub {
 
-    static double CalculateAverage(int[] marks)
-    {
-        Console.WriteLine("Students Marks");
-        int sum = 0;
+//     static double CalculateAverage(int[] marks)
+//     {
+//         Console.WriteLine("Students Marks");
+//         int sum = 0;
 
-        foreach (int mark in marks)
-        {
-            Console.WriteLine(mark);
-        }
-        for (int i = 0; i < marks.Length; i++)
-        {
-            sum += marks[i];
-        }
+//         foreach (int mark in marks)
+//         {
+//             Console.WriteLine(mark);
+//         }
+//         for (int i = 0; i < marks.Length; i++)
+//         {
+//             sum += marks[i];
+//         }
 
-        double average = (double)sum / marks.Length;
-        return average;
-    }
+//         double average = (double)sum / marks.Length;
+//         return average;
+//     }
+//     static void Main()
+//     {
+//         Console.WriteLine("Enter The Student Marks: ");
+//         string input = Console.ReadLine();
+//         string[] marks = input.Split(' ');
+
+//         int[] intMarks = new int[marks.Length];
+//         for (int i=0; i < marks.Length; i++) {
+//             intMarks[i] = int.Parse(marks[i]);
+//         }
+
+//         double average = CalculateAverage(intMarks);
+//         Console.WriteLine("Average marks are "+ average);
+//     }
+
+// }
+
+class Program
+{
     static void Main()
     {
-        Console.WriteLine("Enter The Student Marks: ");
-        string input = Console.ReadLine();
-        string[] marks = input.Split(' ');
-
-        int[] intMarks = new int[marks.Length];
-        for (int i=0; i < marks.Length; i++) {
-            intMarks[i] = int.Parse(marks[i]);
-        }
-
-        double average = CalculateAverage(intMarks);
-        Console.WriteLine("Average marks are "+ average);
+        arrays();
     }
-    
+
+    static void arrays()
+    {
+        int[] intArray1 = new int[5];
+
+        int[] intArray2 = new int[5] { 1, 2, 3, 4, 5 };
+
+        int[] intArray3 = { 1, 2, 3 };
+        //One dimentional Array
+        Console.WriteLine("intArray3");
+        foreach (int d in intArray3)
+            Console.WriteLine(d);
+        Console.WriteLine();
+
+        //Two Dimentional Array
+        int[,] _2D = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+        for (int i = 0; i < 4; i++)
+            for (int j = 0; j < 2; j++)
+                Console.WriteLine(_2D[i, j] + "");
+        Console.WriteLine();
+        Console.WriteLine(intArray3);
+
+    }
 }
