@@ -325,33 +325,35 @@ using System.Collections.Specialized;
 
 // }
 
-class Program
-{
-    static void Main()
-    {
-        arrays();
-    }
+// class Program
+// {
+//     static void Main()
+//     {
+//         arrays();
+//     }
 
-    static void arrays()
-    {
-        int[] intArray1 = new int[5];
+//     static void arrays()
+//     {
 
-        int[] intArray2 = new int[5] { 1, 2, 3, 4, 5 };
 
-        int[] intArray3 = { 1, 2, 3 };
-        //One dimentional Array
-        Console.WriteLine("intArray3");
-        foreach (int d in intArray3)
-            Console.WriteLine(d);
-        Console.WriteLine();
+//         int[] intArray1 = new int[5];
 
-        //Two Dimentional Array
-        int[,] _2D = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
-        for (int i = 0; i < 4; i++)
-            for (int j = 0; j < 2; j++)
-                Console.WriteLine(_2D[i, j] + "");
-        Console.WriteLine();
-        Console.WriteLine(intArray3);
+//         int[] intArray2 = new int[5] { 1, 2, 3, 4, 5 };
 
-    }
-}
+//         int[] intArray3 = { 1, 2, 3 };
+//         //One dimentional Array
+//         Console.WriteLine("intArray3");
+//         foreach (int d in intArray3)
+//             Console.WriteLine(d);
+//         Console.WriteLine();
+
+//         //Two Dimentional Array
+//         int[,] _2D = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+//         for (int i = 0; i < 4; i++)
+//             for (int j = 0; j < 2; j++)
+//                 Console.WriteLine(_2D[i, j] + "");
+//         Console.WriteLine();
+//         Console.WriteLine(intArray3);
+
+//     }
+// }
