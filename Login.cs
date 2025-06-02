@@ -400,6 +400,12 @@ namespace Operators
             Console.WriteLine(a -= 10);
             Console.WriteLine(a++);
             Console.WriteLine(a--);
+            Console.WriteLine(a=19);
+            Console.WriteLine(b);
+            Console.WriteLine(a>b?b:a);
+            Console.WriteLine(a<b?a:b);
+            Console.WriteLine(a>b && b>a);
+            Console.WriteLine(a>b || b>a);
             
         }
     }
