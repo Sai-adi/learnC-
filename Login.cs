@@ -287,8 +287,8 @@
 // }
 
 
-using System.Collections.Specialized;
-using System.Globalization;
+// using System.Collections.Specialized;
+// using System.Globalization;
 
 // class Hub {
 
@@ -360,7 +360,47 @@ using System.Globalization;
 //     int[][] J_A = new int[2][];
 //     //jagged array
 //     J_A[0]=new int[5] {1,3,5,7,9};
-    
+
 
 // }
 
+using System.Security.Cryptography;
+
+namespace Operators
+{
+    class program()
+    {
+        static void Main(string[] args)
+        {
+            operators();
+        }
+
+        static void operators()
+        {
+            int a = 10;
+            int b = 20;
+
+            //Arithmetic operators
+            Console.WriteLine(a + b);
+            Console.WriteLine(a - b);
+            Console.WriteLine(a * b);
+            Console.WriteLine(a / b);
+            Console.WriteLine(a % b);
+
+            //Relational operators
+            Console.WriteLine(a > b);
+            Console.WriteLine(a < b);
+            Console.WriteLine(a <= b);
+            Console.WriteLine(a >= b);
+            Console.WriteLine(a != b);
+
+            //Assignment Operator
+            Console.WriteLine(a = b);
+            Console.WriteLine(a += 10);
+            Console.WriteLine(a -= 10);
+            Console.WriteLine(a++);
+            Console.WriteLine(a--);
+            
+        }
+    }
+}
