@@ -364,51 +364,62 @@
 
 // }
 
-using System.Security.Cryptography;
+// using System.Security.Cryptography;
 
-namespace Operators
+// namespace Operators
+// {
+//     class program()
+//     {
+//         static void Main(string[] args)
+//         {
+//             operators();
+//         }
+
+//         static void operators()
+//         {
+//             int a = 10;
+//             int b = 20;
+
+//             //Arithmetic operators
+//             Console.WriteLine(a + b);
+//             Console.WriteLine(a - b);
+//             Console.WriteLine(a * b);
+//             Console.WriteLine(a / b);
+//             Console.WriteLine(a % b);
+
+//             //Relational operators
+//             Console.WriteLine(a > b);
+//             Console.WriteLine(a < b);
+//             Console.WriteLine(a <= b);
+//             Console.WriteLine(a >= b);
+//             Console.WriteLine(a != b);
+
+//             //Assignment Operator
+//             Console.WriteLine(a = b);
+//             Console.WriteLine(a += 10);
+//             Console.WriteLine(a -= 10);
+//             Console.WriteLine(a++);
+//             Console.WriteLine(a--);
+//             Console.WriteLine(a = 19);
+//             Console.WriteLine(b);
+//             Console.WriteLine(a > b ? b : a);
+//             Console.WriteLine(a < b ? a : b);
+//             Console.WriteLine(a > b && b > a);
+//             Console.WriteLine(a > b || b > a);
+
+//         }
+
+
+//     }
+// }
+
+using System;
+
+class para
 {
-    class program()
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            operators();
-        }
-
-        static void operators()
-        {
-            int a = 10;
-            int b = 20;
-
-            //Arithmetic operators
-            Console.WriteLine(a + b);
-            Console.WriteLine(a - b);
-            Console.WriteLine(a * b);
-            Console.WriteLine(a / b);
-            Console.WriteLine(a % b);
-
-            //Relational operators
-            Console.WriteLine(a > b);
-            Console.WriteLine(a < b);
-            Console.WriteLine(a <= b);
-            Console.WriteLine(a >= b);
-            Console.WriteLine(a != b);
-
-            //Assignment Operator
-            Console.WriteLine(a = b);
-            Console.WriteLine(a += 10);
-            Console.WriteLine(a -= 10);
-            Console.WriteLine(a++);
-            Console.WriteLine(a--);
-            Console.WriteLine(a = 19);
-            Console.WriteLine(b);
-            Console.WriteLine(a > b ? b : a);
-            Console.WriteLine(a < b ? a : b);
-            Console.WriteLine(a > b && b > a);
-            Console.WriteLine(a > b || b > a);
-
-        }
-        
-        
+        string a = "Welcome to Me";
+        Console.WriteLine(a);
     }
 }
