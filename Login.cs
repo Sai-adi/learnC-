@@ -432,7 +432,11 @@ class para
         string abc = b[2] + b[1] + " Good to see";
         Console.WriteLine(abc);
         int t = 100;
-        string f = String.Format("{0}{1}{2}", a,"with", t.ToString());
+        string f = String.Format("{0}{1}{2}", a, "with", t.ToString());
         Console.WriteLine(f);
+
+        Console.WriteLine("Enter Your Name");
+        string name = Console.ReadLine();
+        Console.WriteLine(name);
     }
 }
