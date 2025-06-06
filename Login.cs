@@ -421,6 +421,18 @@ class para
     {
         string a = "Welcome to Me";
         Console.WriteLine(a);
-        
+
+        string[] b = new string[3];
+        b[0] = "dotnet";
+        b[1] = "ASP";
+        b[2] = "CORE";
+        for (int i = 0; i < 3; i++)
+            Console.WriteLine(b[i]);
+
+        string abc = b[2] + b[1] + " Good to see";
+        Console.WriteLine(abc);
+        int t = 100;
+        string f = String.Format("{0}{1}{2}", a,"with", t.ToString());
+        Console.WriteLine(f);
     }
 }
