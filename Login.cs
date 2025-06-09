@@ -476,29 +476,29 @@ namespace Inheritance
         public string FirstName;
         public string LastName;
         public string Email;
-        public string FullName;
+        public void FullName()
+        {
+            Console.WriteLine(FirstName + " " + LastName);
+        }
     }
-    public class FullTime: Employee
-    {
-        public float YearlySalary;
-
-    }
+    
     public class PartTime: Employee
     {
-        public float HourlySalary;
+        public new void FullName()
+        {
+            base.FullName();
+            Console.WriteLine(FirstName + " " + LastName+"--ConstractEmployee--");
+        }
     }
     public class Program
     {
         static void Main(string[] args)
         {
-            FullTime fut = new FullTime();
-            fut.FullName = "Telugu";
-            fut.FirstName = "Guy";
-
-            PartTime prt = new PartTime();
-            prt.FirstName = "Man";
-            prt.LastName = "Women";
-            prt.HourlySalary = 1000;
+            Employee pta = new PartTime();
+            pta.FirstName = "Partime";
+            pta.LastName = "Employee";
+            pta.FullName();
+            ((Employee)pta).FullName();
         }
     }
 }
