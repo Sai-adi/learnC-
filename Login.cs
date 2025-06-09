@@ -468,3 +468,37 @@
 //         }
 //     }
 // }
+
+namespace Inheritance
+{
+    public class Employee
+    {
+        public string FirstName;
+        public string LastName;
+        public string Email;
+        public string FullName;
+    }
+    public class FullTime: Employee
+    {
+        public float YearlySalary;
+
+    }
+    public class PartTime: Employee
+    {
+        public float HourlySalary;
+    }
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            FullTime fut = new FullTime();
+            fut.FullName = "Telugu";
+            fut.FirstName = "Guy";
+
+            PartTime prt = new PartTime();
+            prt.FirstName = "Man";
+            prt.LastName = "Women";
+            prt.HourlySalary = 1000;
+        }
+    }
+}
