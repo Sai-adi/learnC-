@@ -501,4 +501,4 @@ namespace Inheritance
             ((Employee)pta).FullName();
         }
     }
-}
+}   
